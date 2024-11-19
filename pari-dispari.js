@@ -3,18 +3,20 @@ L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un n
 */
 
 // 1.
+const userNumber = prompt(`Inserisci un numero da 1 a 5`);
+console.log(`Tu hai scelto il numero ` + parseInt(userNumber));
 
 const oddEven = prompt(`Scegli se giocare pari o dispari`);
 console.log(`Hai scelto di giocare ` + oddEven);
 
-const userNumber = prompt(`Inserisci un numero da 1 a 5`);
-console.log(`Tu hai scelto il numero ` + parseInt(userNumber));
+
+let somma;
+let message; 
+
+console.log(randomNumber(), iswinner())
 
 
 function randomNumber(){
-  
-  let somma;
-  let message; 
   
   generatedNumber = Math.floor(Math.random() * 5 + 1);
   console.log(`Il pc ha scelto: ` + generatedNumber);
@@ -23,11 +25,11 @@ function randomNumber(){
   
   if (somma % 2 === 0){
 
-    message = ` è un numero pari`;
+    message = ` è un numero pari.`;
 
   } else {
 
-    message = ' è un numero dispari'
+    message = ' è un numero dispari.'
 
   }
 
@@ -37,7 +39,33 @@ function randomNumber(){
 
 function iswinner (){
 
+  let messageResult;
+
+  if ((oddEven == `pari`) & (somma % 2 === 0)){
+
+    messageResult =` Hai Vinto!`;
+
+  } else {
+
+    messageResult = ` Hai Perso, Ritenta!`;
+
+  }
+
+  return messageResult
 }
 
 
-console.log(randomNumber())
+/*  if ((oddEven == `pari`) & (!(somma % 2 === 0))){
+
+    messageResult = ` Hai Perso, Ritenta!`;
+
+  } else {
+
+    messageResult = ` Hai Vinto!`;
+  }
+
+
+}
+*/
+
+
