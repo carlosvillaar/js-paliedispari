@@ -13,7 +13,7 @@ console.log(`Hai scelto di giocare ` + oddEven);
 let somma;
 let message; 
 
-console.log(randomNumber(), iswinner())
+console.log(randomNumber(), iswinner());
 
 
 function randomNumber(){
@@ -21,7 +21,7 @@ function randomNumber(){
   generatedNumber = Math.floor(Math.random() * 5 + 1);
   console.log(`Il pc ha scelto: ` + generatedNumber);
 
-  somma = generatedNumber + parseInt(userNumber)
+  somma = generatedNumber + parseInt(userNumber);
   
   if (somma % 2 === 0){
 
@@ -33,7 +33,7 @@ function randomNumber(){
 
   }
 
-  return (somma + message)
+  return (somma + message);
 
 }
 
@@ -51,21 +51,7 @@ function iswinner (){
 
   }
 
-  return messageResult
+  return messageResult;
 }
-
-
-/*  if ((oddEven == `pari`) & (!(somma % 2 === 0))){
-
-    messageResult = ` Hai Perso, Ritenta!`;
-
-  } else {
-
-    messageResult = ` Hai Vinto!`;
-  }
-
-
-}
-*/
 
 
