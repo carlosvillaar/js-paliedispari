@@ -1,4 +1,4 @@
-Title
+Palindroma, Pari e Dispari
 ===
                                           Palidroma
 Chiedere all’utente di inserire una parola
